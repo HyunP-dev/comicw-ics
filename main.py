@@ -45,7 +45,6 @@ class Event:
         saved_events = set(saved_events)
 
         for event in current_events - saved_events:
-            print(event.title, "데이터베이스에 기록됨.")
             cursor.execute("INSERT INTO comic VALUES (?, ?, ?, ?)", (event.title, event.place, event.start_date, event.end_date))
             con.commit()
 
