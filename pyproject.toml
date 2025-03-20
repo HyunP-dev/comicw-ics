@@ -10,9 +10,7 @@ requires-python = ">=3.12"
 dependencies = [
     "vobject (>=0.9.9,<0.10.0)",
     "fastapi[standard] (>=0.115.11,<0.116.0)",
-    "bs4 (>=0.0.2,<0.0.3)",
     "requests (>=2.32.3,<3.0.0)",
-    "html5lib (>=1.1,<2.0)"
 ]
 
 
