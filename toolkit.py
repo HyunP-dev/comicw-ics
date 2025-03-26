@@ -1,6 +1,6 @@
 from __future__ import annotations
 from dataclasses import dataclass
-from datetime import date
+from datetime import date, timedelta
 import sqlite3
 
 import requests
@@ -55,5 +55,5 @@ class Event:
             vevent.add("summary").value = event.title
             vevent.add("location").value = event.place
             vevent.add('dtstart').value = event.start_date
-            vevent.add('dtend').value = event.end_date
+            vevent.add('dtend').value = event.end_date + timedelta(1)
         return cal
